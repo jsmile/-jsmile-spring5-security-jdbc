@@ -56,9 +56,9 @@ public class AppConfig
 		{
 			// set the jdbc driver class and the database connection props
 			securityDataSource.setDriverClass( env.getProperty( "jdbc.driver" ) );
-			securityDataSource.setDriverClass( env.getProperty( "jdbc.url" ) );
-			securityDataSource.setDriverClass( env.getProperty( "jdbc.user" ) );
-			securityDataSource.setDriverClass( env.getProperty( "jdbc.passwrod" ) );
+			securityDataSource.setJdbcUrl( env.getProperty( "jdbc.url" ) );
+			securityDataSource.setUser( env.getProperty( "jdbc.user" ) );
+			securityDataSource.setPassword( env.getProperty( "jdbc.password" ) );
 
 			// log the connection	props
 			logger.info( "\n>>> jdbc.url : " + env.getProperty( "jdbc.driver" ) );
